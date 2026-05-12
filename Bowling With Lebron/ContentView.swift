@@ -10,7 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image("Lebron")
+            Image("Lebron").scaledToFill().ignoresSafeArea()
+                
+            
                 .foregroundStyle(.tint)
         }
         .padding()
