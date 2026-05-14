@@ -9,16 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image("Lebron").scaledToFill().ignoresSafeArea()
-                
+        
+        NavigationView {
             
-                .foregroundStyle(.tint)
+            VStack {
+                Image("Lebron").scaledToFill().ignoresSafeArea()
+                    .foregroundStyle(.tint)
+                NavigationLink("Go To Next Screen") {
+                    MemePage()
+                }
+                .padding()
+            }
         }
-        .padding()
     }
 }
-
 #Preview {
     ContentView()
 }
