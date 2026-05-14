@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct MemePage: View {
-    private var x = Int.random(in: 1...16)
+    @State private var x = Int.random(in: 1...16)
     var body: some View {
         Text("Lebron Memes")
             .padding(10)
-     Image("lebron\(x)")
-    }
-}
-
-
-func randomMeme(){
-    func generateRandomNumber() -> Int {
-        return Int.random(in: 1...16)
+        Image("lebron\(x)")
+        Button(action: {
+            x = Int.random(in: 1...16)
+        }) {
+            Text("Show Random Meme")
+        }
     }
 }
 
