@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct MemePage: View {
-    private var x = randomMeme()
+    private var x = Int.random(in: 1...16)
     var body: some View {
-        
+        Text("Lebron Memes")
+            .padding(10)
      Image("lebron\(x)")
     }
 }
